@@ -3,7 +3,7 @@
 // const createArrayUserObject = (value:{id: number, name: string}) => {
 //     return [value]
 // }
-const createArrayWithGeneric = <T>(value:T)=>{
+const createArrayWithGeneric = <T>(value:T): T[]=>{
     return[value]
 }
 const arrString = createArrayWithGeneric('apple')
@@ -14,6 +14,8 @@ const arrObj = createArrayWithGeneric({id: 3, name:'mr'})
 const createArrayWithoutTuple = (params: string, params2: number) => [params,params2]
 const createArrayWithTuple = <X,Y>(params: X, params2 :Y) => [params,params2]
 const res1 = createArrayWithTuple('mr', 333)
+const res222 = createArrayWithTuple('rr', {name: 'no'})
+console.log(res222)
 console.log(res1);
 const res2 = createArrayWithTuple(333, false)
 console.log(res2)
