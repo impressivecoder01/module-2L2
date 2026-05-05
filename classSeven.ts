@@ -36,9 +36,17 @@ const address = user['address']
 console.log(myId,myName,address)
 
 // type Key = keyof User
-
-const getPropertyObject = (obj: User, key: keyof User)=> {
+const product = {
+    brand: "Hp"
+}
+const gene = {
+    class: 'four'
+}
+const getPropertyObject = <X>(obj: X, key: keyof X)=> {
     return obj[key]
 }
 const getProperty = getPropertyObject(user, 'name')
 console.log(getProperty);
+const getProduct = getPropertyObject(product, 'brand')
+const getGene = getPropertyObject(gene, 'class')
+console.log(getProduct,getGene);
