@@ -1,5 +1,6 @@
 // constrain : strict rules 
-const addStudentToCourse6 = <T extends {id: number, name: string}>(studentInfo: T) => {
+type ObjectForStudent = {id: number, name: string, home: string,dateOfBirth: string}
+const addStudentToCourse6 = <T extends ObjectForStudent>(studentInfo: T) => {
     return {course: 'PH', ...studentInfo}
 }
 const student16 ={
@@ -16,7 +17,10 @@ const student26 = {
 const studentThree = {
     id: 44,
     name: 'r',
-    hasWatch: true
+    hasWatch: true,
+    home: 's',
+    dateOfBirth: '3,3,3'
+
 }
 const result3 = addStudentToCourse6(studentThree)
 console.log(result3);
