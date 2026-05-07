@@ -19,3 +19,12 @@ const product1 : ProductWithColor = {
 }
 
 type OptionalProduct = Partial<Product>
+type ProductReadOnly = Readonly<Product>
+
+const Product2 ={
+    id: 22,
+    stock: 222,
+    name:'product',
+}
+// empty object should  be like  this
+const emptyObj : Record<string, unknown> = {};
